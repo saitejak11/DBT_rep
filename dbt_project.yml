@@ -40,7 +40,7 @@ models:
       +materialized: view
       +schema: app
       +database: |
-        {%- if target.name == "default" -%} dbt_akona
+        {%- if target.name == "default" -%} dbt_steja
         {%- elif target.name == "dev" -%} dbt_dev
         {%- elif target.name == "qa" -%} dbt_qa
         {%- elif target.name == "prd" -%} dbt_prd
@@ -62,7 +62,7 @@ models:
       +materialized: table
       +schema: elt
       +database: |
-        {%- if target.name == "default" -%} dbt_akona
+        {%- if target.name == "default" -%} dbt_steja
         {%- elif target.name == "dev" -%} dbt_dev
         {%- elif target.name == "qa" -%} dbt_qa
         {%- elif target.name == "prd" -%} dbt_prd
@@ -83,7 +83,7 @@ seeds:
 snapshots:
   +target_schema: edw
   +database: |
-    {%- if target.name == "default" -%} dbt_akona
+    {%- if target.name == "default" -%} dbt_steja
     {%- elif target.name == "dev" -%} dbt_dev
     {%- elif target.name == "qa" -%} dbt_qa
     {%- elif target.name == "prd" -%} dbt_prd
