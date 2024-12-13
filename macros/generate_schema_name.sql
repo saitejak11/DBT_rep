@@ -2,7 +2,7 @@
  
     {%- set default_schema = target.schema -%}
  
-    {%- if (target.name == 'dev' or target.name== 'qa' or target.name== 'prd') and custom_schema_name is not none -%}
+    {%- if (target.name == 'default' or target.name == 'dev' or target.name== 'qa' or target.name== 'prd') and custom_schema_name is not none -%}
        
         {{ custom_schema_name | trim }}
  
